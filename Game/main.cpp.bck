@@ -1,0 +1,203 @@
+#include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
+#include <SFML/Network.hpp>
+#include "ResourcePath.hpp"
+#include <iostream>
+
+int main(int argc, const char * argv[])
+{
+    // Creation of window
+    sf::RenderWindow window(sf::VideoMode(800, 600), "SFML Game");
+    
+    // setting framerate limit to 60 FPS
+    window.setFramerateLimit(60);
+    
+    window.setKeyRepeatEnabled(true);
+    
+    // Keeps game loop running
+    bool play = true;
+    
+    // Events made out side of game loop
+    sf::Event event;
+    
+    // Event states
+    bool aPressed = false;
+    bool aReleased = false;
+    
+    bool space = false;
+    bool leftClick = false;
+    
+    // Variables
+    // Mouse clicks
+    int numberOfClicks = 0;
+    
+    int mouseX = 0, mouseY = 0;
+    
+    // Rect position
+    int rectXPosition = 0;
+    
+    // Images
+    sf::Texture image1;
+    if (image1.loadFromFile("/Users/maxmarze/Dropbox/sfml/Game/Game/Frog_one.png") == 0)
+    {
+        return 1;
+    }
+    
+    // Render shapes
+    sf::RectangleShape rect;
+    rect.setSize(sf::Vector2f(32, 32));
+    rect.setPosition(0, 0);
+    //rect.setFillColor(sf::Color::Green);
+    rect.setTexture(&image1);
+    
+    sf::CircleShape circle;
+    circle.setRadius(50);
+    circle.setPosition(400, 300);
+    circle.setFillColor(sf::Color::Blue);
+    
+    // Font
+    sf::Font font;
+    if(font.loadFromFile("/Users/maxmarze/Dropbox/sfml/Game/Game/Super Plumber Brothers.ttf") == 0)
+    {
+        return 1;
+    }
+    
+    //Text
+    sf::Text title;
+    title.setFont(font);
+    title.setCharacterSize(30);
+    title.setString("Hello, World!");
+    title.setPosition(300, 50);
+    title.setColor(sf::Color::Magenta);
+    
+    
+    // Sounds
+    sf::SoundBuffer ExplosionBuffer;
+    if(ExplosionBuffer.loadFromFile("/Users/maxmarze/Dropbox/sfml/Game/Game/explosion.wav") == 0)
+    {
+        return 1;
+    }
+    
+    sf::Sound explosion;
+    explosion.setBuffer(ExplosionBuffer);
+    //explosion.setLoop(true);
+    //explosion.setVolume(100);
+    
+    explosion.play();
+    // other things you can do
+    //explosion.stop();
+    //explosion.pause();
+    
+    
+    // Music
+    sf::Music Densmore;
+    if(Densmore.openFromFile("/Users/maxmarze/Dropbox/sfml/Game/Game/02 Densmore.ogg") == 0)
+    {
+        return 1;
+    }
+    
+    Densmore.setLoop(true);
+    Densmore.play();
+    
+    // Game loop
+    while (play == true)
+    {
+        
+        // EVENTS
+        
+        
+        while(window.pollEvent(event))
+        {
+            if(event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::A)
+            {
+                aPressed = true;
+            }
+            
+            if(event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::A)
+            {
+                aReleased = true;
+            }
+            
+            if(event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Space)
+            {
+                space = true;
+            }
+            
+            if(event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::Space)
+            {
+                space = false;
+            }
+            
+            if(event.type == sf::Event::MouseButtonPressed && event.mouseButton.button == sf::Mouse::Left)
+            {
+                leftClick = true;
+            }
+            
+            if(event.type == sf::Event::MouseMoved)
+            {
+                mouseX = event.mouseMove.x;
+                mouseY = event.mouseMove.y;
+            }
+            
+            if(event.type == sf::Event::Closed)
+            {
+                play = false;
+            }
+        }
+        
+        // LOGIC
+        
+        if(aPressed == true)
+        {
+            std::cout << "The A Key has been pressed\n";
+            rectXPosition++;
+            aPressed = false;
+        }
+        
+        if(aReleased == true)
+        {
+            std::cout << "The A key has been released\n";
+            aReleased = false;
+        }
+        
+//        if(space == true)
+//        {
+//            std::cout << "SPACE\n";
+//        }
+//        if(space == false)
+//        {
+//            std::cout << "NOT SPACE\n";
+//        }
+        if(leftClick == true)
+        {
+            numberOfClicks++;
+            std::cout << "numberOfClickes = " << numberOfClicks << "\n";
+            leftClick = false;
+        }
+        
+        std::cout << "Mouse x: " << mouseX << " Mouse y: " << mouseY << "\n";
+        
+        // RENDERING
+        //rectXPosition++;
+        rect.setPosition(rectXPosition, rectXPosition);
+        /// Clears window
+        window.clear();
+        
+        window.draw(rect);
+        window.draw(circle);
+        
+        window.draw(title);
+        
+        /// Displays whatever we create
+        window.display();
+        
+    }
+    
+    
+    ////////
+    
+    // Clean up
+    window.close();
+    
+    return 0;
+}
