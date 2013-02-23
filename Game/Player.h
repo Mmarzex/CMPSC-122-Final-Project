@@ -10,5 +10,23 @@
 #define __Game__Player__
 
 #include <iostream>
+#include <SFML/Graphics.hpp>
+#include "ResourcePath.hpp"
+
+class Player
+{
+public:
+    
+    void CreatePlayer();
+    
+    void SpawnPlayer(sf::RenderWindow &window);
+    
+    void CheckMovement(sf::RenderWindow &window);
+    
+private:
+    
+    sf::Texture playerImage;
+    sf::Sprite player;
+};
 
 #endif /* defined(__Game__Player__) */

@@ -3,6 +3,7 @@
 #include <SFML/Network.hpp>
 #include "ResourcePath.hpp"
 #include <iostream>
+#include "Player.h"
 
 int main(int argc, const char * argv[])
 {
@@ -45,6 +46,9 @@ int main(int argc, const char * argv[])
     //rect.setFillColor(sf::Color::Green);
     rect.setTexture(&image1);
     
+    Player playerOne;
+    playerOne.CreatePlayer();
+    
     // Font
     sf::Font font;
     if(font.loadFromFile("/Users/maxmarze/Dropbox/sfml/Game/Game/Super Plumber Brothers.ttf") == 0)
@@ -80,16 +84,15 @@ int main(int argc, const char * argv[])
     
     
     // Music
-    sf::Music Densmore;
-    if(Densmore.openFromFile("/Users/maxmarze/Dropbox/sfml/Game/Game/02 Densmore.ogg") == 0)
+    
+    sf::Music titleTheme;
+    if(titleTheme.openFromFile(resourcePath() + "Maxs game.ogg") == 0)
     {
         return 1;
     }
-    
-    Densmore.setLoop(true);
-    Densmore.setVolume(50);
-    Densmore.play();
-    
+    titleTheme.setLoop(true);
+    titleTheme.setVolume(50);
+    titleTheme.play();
     // Game loop
     while (play == true)
     {
@@ -177,7 +180,7 @@ int main(int argc, const char * argv[])
         // Move
         rect.move(xVelocity, yVelocity);
 
-        
+        playerOne.CheckMovement(window);
         // RENDERING
 
         /// Clears window
@@ -186,6 +189,8 @@ int main(int argc, const char * argv[])
         window.draw(rect);
         
         window.draw(title);
+        
+        playerOne.SpawnPlayer(window);
         
         /// Displays whatever we create
         window.display();

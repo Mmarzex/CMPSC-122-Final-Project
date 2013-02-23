@@ -21,9 +21,16 @@
 		126B9E7E16CD7026003F7A51 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 126B9E7C16CD7026003F7A51 /* InfoPlist.strings */; };
 		12844B2E16D5809200E81455 /* explosion.wav in Resources */ = {isa = PBXBuildFile; fileRef = 12844B2D16D5809200E81455 /* explosion.wav */; };
 		12844B3016D582F500E81455 /* cute_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12844B2F16D582F500E81455 /* cute_image.jpg */; };
-		12844B3416D583DE00E81455 /* 02 Densmore.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 12844B3316D583DE00E81455 /* 02 Densmore.ogg */; };
 		12844B5C16D58D6A00E81455 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12844B5B16D58D6A00E81455 /* main.cpp */; };
 		12844B5E16D58EC000E81455 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 12844B5D16D58EC000E81455 /* icon.png */; };
+		129F3E1B16D8B5E300F61D92 /* tinystr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 129F3E1616D8B5E300F61D92 /* tinystr.cpp */; };
+		129F3E1C16D8B5E300F61D92 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 129F3E1716D8B5E300F61D92 /* tinyxml.cpp */; };
+		129F3E1D16D8B5E300F61D92 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 129F3E1816D8B5E300F61D92 /* tinyxmlerror.cpp */; };
+		129F3E1E16D8B5E300F61D92 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 129F3E1916D8B5E300F61D92 /* tinyxmlparser.cpp */; };
+		129F3E1F16D8B5E300F61D92 /* TmxLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 129F3E1A16D8B5E300F61D92 /* TmxLoader.cpp */; };
+		129F3E2416D8B60300F61D92 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 129F3E2316D8B60300F61D92 /* libz.dylib */; };
+		129F3E2716D8B89900F61D92 /* Max_s Game - Dungeon.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 129F3E2516D8B89900F61D92 /* Max_s Game - Dungeon.ogg */; };
+		129F3E2816D8B89900F61D92 /* Maxs game.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 129F3E2616D8B89900F61D92 /* Maxs game.ogg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,9 +52,19 @@
 		126B9E7D16CD7026003F7A51 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		12844B2D16D5809200E81455 /* explosion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = explosion.wav; sourceTree = "<group>"; };
 		12844B2F16D582F500E81455 /* cute_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cute_image.jpg; sourceTree = "<group>"; };
-		12844B3316D583DE00E81455 /* 02 Densmore.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = "02 Densmore.ogg"; sourceTree = "<group>"; };
 		12844B5B16D58D6A00E81455 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		12844B5D16D58EC000E81455 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		129F3E1616D8B5E300F61D92 /* tinystr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinystr.cpp; sourceTree = "<group>"; };
+		129F3E1716D8B5E300F61D92 /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml.cpp; sourceTree = "<group>"; };
+		129F3E1816D8B5E300F61D92 /* tinyxmlerror.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlerror.cpp; sourceTree = "<group>"; };
+		129F3E1916D8B5E300F61D92 /* tinyxmlparser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlparser.cpp; sourceTree = "<group>"; };
+		129F3E1A16D8B5E300F61D92 /* TmxLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TmxLoader.cpp; sourceTree = "<group>"; };
+		129F3E2016D8B5F300F61D92 /* tinystr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinystr.h; sourceTree = "<group>"; };
+		129F3E2116D8B5F300F61D92 /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml.h; sourceTree = "<group>"; };
+		129F3E2216D8B5F300F61D92 /* TmxLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TmxLoader.h; sourceTree = "<group>"; };
+		129F3E2316D8B60300F61D92 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		129F3E2516D8B89900F61D92 /* Max_s Game - Dungeon.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Max_s Game - Dungeon.ogg"; sourceTree = "<group>"; };
+		129F3E2616D8B89900F61D92 /* Maxs game.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Maxs game.ogg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				129F3E2416D8B60300F61D92 /* libz.dylib in Frameworks */,
 				126B9E6C16CD7026003F7A51 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,6 +90,9 @@
 		1244E06B16D8B496001EC4D7 /* Header files */ = {
 			isa = PBXGroup;
 			children = (
+				129F3E2016D8B5F300F61D92 /* tinystr.h */,
+				129F3E2116D8B5F300F61D92 /* tinyxml.h */,
+				129F3E2216D8B5F300F61D92 /* TmxLoader.h */,
 				1244E06E16D8B4B7001EC4D7 /* Player.h */,
 			);
 			name = "Header files";
@@ -80,6 +101,11 @@
 		1244E06C16D8B49D001EC4D7 /* Source files */ = {
 			isa = PBXGroup;
 			children = (
+				129F3E1616D8B5E300F61D92 /* tinystr.cpp */,
+				129F3E1716D8B5E300F61D92 /* tinyxml.cpp */,
+				129F3E1816D8B5E300F61D92 /* tinyxmlerror.cpp */,
+				129F3E1916D8B5E300F61D92 /* tinyxmlparser.cpp */,
+				129F3E1A16D8B5E300F61D92 /* TmxLoader.cpp */,
 				1244E06D16D8B4B7001EC4D7 /* Player.cpp */,
 			);
 			name = "Source files";
@@ -88,6 +114,7 @@
 		126B9E5E16CD7026003F7A51 = {
 			isa = PBXGroup;
 			children = (
+				129F3E2316D8B60300F61D92 /* libz.dylib */,
 				12844B5D16D58EC000E81455 /* icon.png */,
 				126B9E6D16CD7026003F7A51 /* Game */,
 				126B9E6A16CD7026003F7A51 /* Frameworks */,
@@ -130,8 +157,9 @@
 		126B9E7316CD7026003F7A51 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				129F3E2516D8B89900F61D92 /* Max_s Game - Dungeon.ogg */,
+				129F3E2616D8B89900F61D92 /* Maxs game.ogg */,
 				1244E06A16D8B490001EC4D7 /* New Group */,
-				12844B3316D583DE00E81455 /* 02 Densmore.ogg */,
 				12844B2F16D582F500E81455 /* cute_image.jpg */,
 				12844B2D16D5809200E81455 /* explosion.wav */,
 				1222926616D5386B00E8002C /* Super Plumber Brothers.ttf */,
@@ -214,8 +242,9 @@
 				1222926716D5386B00E8002C /* Super Plumber Brothers.ttf in Resources */,
 				12844B2E16D5809200E81455 /* explosion.wav in Resources */,
 				12844B3016D582F500E81455 /* cute_image.jpg in Resources */,
-				12844B3416D583DE00E81455 /* 02 Densmore.ogg in Resources */,
 				12844B5E16D58EC000E81455 /* icon.png in Resources */,
+				129F3E2716D8B89900F61D92 /* Max_s Game - Dungeon.ogg in Resources */,
+				129F3E2816D8B89900F61D92 /* Maxs game.ogg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +276,11 @@
 				1232CEF416D28FC00017D714 /* main.cpp.bck in Sources */,
 				12844B5C16D58D6A00E81455 /* main.cpp in Sources */,
 				1244E06F16D8B4B7001EC4D7 /* Player.cpp in Sources */,
+				129F3E1B16D8B5E300F61D92 /* tinystr.cpp in Sources */,
+				129F3E1C16D8B5E300F61D92 /* tinyxml.cpp in Sources */,
+				129F3E1D16D8B5E300F61D92 /* tinyxmlerror.cpp in Sources */,
+				129F3E1E16D8B5E300F61D92 /* tinyxmlparser.cpp in Sources */,
+				129F3E1F16D8B5E300F61D92 /* TmxLoader.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
