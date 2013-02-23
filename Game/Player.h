@@ -23,7 +23,11 @@ public:
     
     void CheckMovement(sf::RenderWindow &window);
     
+    void CheckCollision(const sf::Sprite &sprite);
+    
 private:
+    
+    float Speed;
     
     sf::Texture playerImage;
     sf::Sprite player;

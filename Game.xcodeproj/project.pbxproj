@@ -19,6 +19,7 @@
 		126B9E7716CD7026003F7A51 /* cute_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 126B9E7616CD7026003F7A51 /* cute_image.jpg */; };
 		126B9E7916CD7026003F7A51 /* nice_music.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 126B9E7816CD7026003F7A51 /* nice_music.ogg */; };
 		126B9E7E16CD7026003F7A51 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 126B9E7C16CD7026003F7A51 /* InfoPlist.strings */; };
+		127C94C016D922DC007D32C9 /* Collision.cpp.b in Sources */ = {isa = PBXBuildFile; fileRef = 127C94BE16D922DC007D32C9 /* Collision.cpp.b */; };
 		12844B2E16D5809200E81455 /* explosion.wav in Resources */ = {isa = PBXBuildFile; fileRef = 12844B2D16D5809200E81455 /* explosion.wav */; };
 		12844B3016D582F500E81455 /* cute_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12844B2F16D582F500E81455 /* cute_image.jpg */; };
 		12844B5C16D58D6A00E81455 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12844B5B16D58D6A00E81455 /* main.cpp */; };
@@ -50,6 +51,8 @@
 		126B9E7816CD7026003F7A51 /* nice_music.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = nice_music.ogg; sourceTree = "<group>"; };
 		126B9E7B16CD7026003F7A51 /* Game-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Game-Info.plist"; sourceTree = "<group>"; };
 		126B9E7D16CD7026003F7A51 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		127C94BE16D922DC007D32C9 /* Collision.cpp.b */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Collision.cpp.b; sourceTree = "<group>"; };
+		127C94BF16D922DC007D32C9 /* Collision.h.b */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Collision.h.b; sourceTree = "<group>"; };
 		12844B2D16D5809200E81455 /* explosion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = explosion.wav; sourceTree = "<group>"; };
 		12844B2F16D582F500E81455 /* cute_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cute_image.jpg; sourceTree = "<group>"; };
 		12844B5B16D58D6A00E81455 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -94,6 +97,7 @@
 				129F3E2116D8B5F300F61D92 /* tinyxml.h */,
 				129F3E2216D8B5F300F61D92 /* TmxLoader.h */,
 				1244E06E16D8B4B7001EC4D7 /* Player.h */,
+				127C94BF16D922DC007D32C9 /* Collision.h.b */,
 			);
 			name = "Header files";
 			sourceTree = "<group>";
@@ -101,6 +105,7 @@
 		1244E06C16D8B49D001EC4D7 /* Source files */ = {
 			isa = PBXGroup;
 			children = (
+				127C94BE16D922DC007D32C9 /* Collision.cpp.b */,
 				129F3E1616D8B5E300F61D92 /* tinystr.cpp */,
 				129F3E1716D8B5E300F61D92 /* tinyxml.cpp */,
 				129F3E1816D8B5E300F61D92 /* tinyxmlerror.cpp */,
@@ -281,6 +286,7 @@
 				129F3E1D16D8B5E300F61D92 /* tinyxmlerror.cpp in Sources */,
 				129F3E1E16D8B5E300F61D92 /* tinyxmlparser.cpp in Sources */,
 				129F3E1F16D8B5E300F61D92 /* TmxLoader.cpp in Sources */,
+				127C94C016D922DC007D32C9 /* Collision.cpp.b in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

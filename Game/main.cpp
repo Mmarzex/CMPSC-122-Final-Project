@@ -16,7 +16,7 @@ int main(int argc, const char * argv[])
     window.setKeyRepeatEnabled(true);
     
     // Keeps game loop running
-    bool play = true;
+    //bool play = true;
     
     // Events made out side of game loop
     sf::Event event;
@@ -39,12 +39,17 @@ int main(int argc, const char * argv[])
         return 1;
     }
     
+    sf::Sprite rect;
+    rect.setTexture(image1);
+    rect.setScale(6.f, 6.f);
+    rect.setPosition(200, 200);
+    
     // Render shapes
-    sf::RectangleShape rect;
-    rect.setSize(sf::Vector2f(32, 32));
-    rect.setPosition(0, 0);
+    //sf::RectangleShape rect;
+    //rect.setSize(sf::Vector2f(32, 32));
+    //rect.setPosition(0, 0);
     //rect.setFillColor(sf::Color::Green);
-    rect.setTexture(&image1);
+    //rect.setTexture(&image1);
     
     Player playerOne;
     playerOne.CreatePlayer();
@@ -94,7 +99,7 @@ int main(int argc, const char * argv[])
     titleTheme.setVolume(50);
     titleTheme.play();
     // Game loop
-    while (play == true)
+    while (window.isOpen())
     {
         
         // EVENTS
@@ -104,7 +109,7 @@ int main(int argc, const char * argv[])
         {
             if(event.type == sf::Event::Closed)
             {
-                play = false;
+                window.close();
             }
             
             if(event.type == sf::Event::KeyPressed)
@@ -181,6 +186,7 @@ int main(int argc, const char * argv[])
         rect.move(xVelocity, yVelocity);
 
         playerOne.CheckMovement(window);
+        playerOne.CheckCollision(rect);
         // RENDERING
 
         /// Clears window

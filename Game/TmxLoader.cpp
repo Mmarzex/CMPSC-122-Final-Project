@@ -43,7 +43,7 @@ it freely, subject to the following restrictions:
 *********************************************************************/
 
 #include "TmxLoader.h"
-#include <TinyXML/tinyxml.h>
+#include "tinyxml.h"
 #include <exception>
 #include <iostream>
 #include <sstream>
