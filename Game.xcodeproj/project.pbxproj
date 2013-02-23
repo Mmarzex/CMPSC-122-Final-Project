@@ -11,6 +11,7 @@
 		1222926516D536FF00E8002C /* Frog_one.png in Resources */ = {isa = PBXBuildFile; fileRef = 1222926416D536FF00E8002C /* Frog_one.png */; };
 		1222926716D5386B00E8002C /* Super Plumber Brothers.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1222926616D5386B00E8002C /* Super Plumber Brothers.ttf */; };
 		1232CEF416D28FC00017D714 /* main.cpp.bck in Sources */ = {isa = PBXBuildFile; fileRef = 1232CEF316D28FC00017D714 /* main.cpp.bck */; };
+		1244E06F16D8B4B7001EC4D7 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1244E06D16D8B4B7001EC4D7 /* Player.cpp */; };
 		126B9E6C16CD7026003F7A51 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126B9E6B16CD7026003F7A51 /* Foundation.framework */; };
 		126B9E6F16CD7026003F7A51 /* main_back.cpp.bck in Sources */ = {isa = PBXBuildFile; fileRef = 126B9E6E16CD7026003F7A51 /* main_back.cpp.bck */; };
 		126B9E7116CD7026003F7A51 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 126B9E7016CD7026003F7A51 /* ResourcePath.mm */; };
@@ -30,6 +31,8 @@
 		1222926416D536FF00E8002C /* Frog_one.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Frog_one.png; path = Game/Frog_one.png; sourceTree = SOURCE_ROOT; };
 		1222926616D5386B00E8002C /* Super Plumber Brothers.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Super Plumber Brothers.ttf"; sourceTree = "<group>"; };
 		1232CEF316D28FC00017D714 /* main.cpp.bck */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.cpp.bck; sourceTree = "<group>"; };
+		1244E06D16D8B4B7001EC4D7 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		1244E06E16D8B4B7001EC4D7 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		126B9E6816CD7026003F7A51 /* Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Game.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		126B9E6B16CD7026003F7A51 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		126B9E6E16CD7026003F7A51 /* main_back.cpp.bck */ = {isa = PBXFileReference; lastKnownFileType = text; path = main_back.cpp.bck; sourceTree = "<group>"; };
@@ -59,6 +62,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1244E06A16D8B490001EC4D7 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		1244E06B16D8B496001EC4D7 /* Header files */ = {
+			isa = PBXGroup;
+			children = (
+				1244E06E16D8B4B7001EC4D7 /* Player.h */,
+			);
+			name = "Header files";
+			sourceTree = "<group>";
+		};
+		1244E06C16D8B49D001EC4D7 /* Source files */ = {
+			isa = PBXGroup;
+			children = (
+				1244E06D16D8B4B7001EC4D7 /* Player.cpp */,
+			);
+			name = "Source files";
+			sourceTree = "<group>";
+		};
 		126B9E5E16CD7026003F7A51 = {
 			isa = PBXGroup;
 			children = (
@@ -91,7 +117,9 @@
 				126B9E6E16CD7026003F7A51 /* main_back.cpp.bck */,
 				1232CEF316D28FC00017D714 /* main.cpp.bck */,
 				12844B5B16D58D6A00E81455 /* main.cpp */,
+				1244E06B16D8B496001EC4D7 /* Header files */,
 				126B9E7016CD7026003F7A51 /* ResourcePath.mm */,
+				1244E06C16D8B49D001EC4D7 /* Source files */,
 				126B9E7216CD7026003F7A51 /* ResourcePath.hpp */,
 				126B9E7316CD7026003F7A51 /* Resources */,
 				126B9E7A16CD7026003F7A51 /* Supporting Files */,
@@ -102,6 +130,7 @@
 		126B9E7316CD7026003F7A51 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1244E06A16D8B490001EC4D7 /* New Group */,
 				12844B3316D583DE00E81455 /* 02 Densmore.ogg */,
 				12844B2F16D582F500E81455 /* cute_image.jpg */,
 				12844B2D16D5809200E81455 /* explosion.wav */,
@@ -217,6 +246,7 @@
 				126B9E7116CD7026003F7A51 /* ResourcePath.mm in Sources */,
 				1232CEF416D28FC00017D714 /* main.cpp.bck in Sources */,
 				12844B5C16D58D6A00E81455 /* main.cpp in Sources */,
+				1244E06F16D8B4B7001EC4D7 /* Player.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
