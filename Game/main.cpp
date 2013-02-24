@@ -4,6 +4,7 @@
 #include "ResourcePath.hpp"
 #include <iostream>
 #include "Player.h"
+#include "Enemy.h"
 
 int main(int argc, const char * argv[])
 {
@@ -54,9 +55,12 @@ int main(int argc, const char * argv[])
     Player playerOne;
     playerOne.CreatePlayer();
     
+    Enemy enemyOne;
+    enemyOne.CreateEnemy();
+    
     // Font
     sf::Font font;
-    if(font.loadFromFile("/Users/maxmarze/Dropbox/sfml/Game/Game/Super Plumber Brothers.ttf") == 0)
+    if(font.loadFromFile(resourcePath() + "Super Plumber Brothers.ttf") == 0)
     {
         return 1;
     }
@@ -98,6 +102,7 @@ int main(int argc, const char * argv[])
     titleTheme.setLoop(true);
     titleTheme.setVolume(50);
     titleTheme.play();
+    
     // Game loop
     while (window.isOpen())
     {
@@ -187,6 +192,7 @@ int main(int argc, const char * argv[])
 
         playerOne.CheckMovement(window);
         playerOne.CheckCollision(rect);
+        playerOne.CheckCollision(enemyOne.GetSprite());
         // RENDERING
 
         /// Clears window
@@ -197,6 +203,7 @@ int main(int argc, const char * argv[])
         window.draw(title);
         
         playerOne.SpawnPlayer(window);
+        enemyOne.SpawnEnemy(window);
         
         /// Displays whatever we create
         window.display();
@@ -204,7 +211,7 @@ int main(int argc, const char * argv[])
     }
     
     
-    ////////
+    //////// 
     
     // Clean up
     window.close();

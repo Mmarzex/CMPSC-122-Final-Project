@@ -108,10 +108,13 @@ bool Collision::PixelPerfectTest(const sf::Sprite& Object1, const sf::Sprite& Ob
         
         //sf::IntRect O1SubRect = Object1.GetSubRect();
         //sf::IntRect O2SubRect = Object2.GetSubRect();
-        sf::IntRect O1SubRect = Object1.getGlobalBounds();
-        sf::IntRect O2SubRect = Object2.getGlobalBounds();
-        sf::Vector2i O1SubRectSize(O1SubRect.GetWidth(), O1SubRect.GetHeight());
-        sf::Vector2i O2SubRectSize(O2SubRect.GetWidth(), O2SubRect.GetHeight());
+        //sf::Vector2i obj1 = Object1.getGlobalBounds();
+        //sf::IntRect O1SubRect(Object1.getGlobalBounds());
+        //sf::IntRect O2SubRect(Object2.getGlobalBounds());
+        sf::IntRect O1SubRect = Object1.getTextureRect();
+        sf::IntRect O2SubRect = Object2.getTextureRect();
+        sf::Vector2i O1SubRectSize(O1SubRect.width, O1SubRect.height);
+        sf::Vector2i O2SubRectSize(O2SubRect.width, O2SubRect.height);
         
         sf::Vector2f o1v;
         sf::Vector2f o2v;
